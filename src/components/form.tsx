@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Button from "./Button";
+import Input from "./Input";
 
 function Form() {
   const [email, setEmail] = useState<string>("");
@@ -15,9 +17,9 @@ function Form() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="email" value={email} onChange={handleChange} /><br />
-      <input type="number" value={age} onChange={e => setAge(Number(e.target.value))} /><br />
-      <button type="submit">Send</button>
+      <Input type="email" value={email} onChange={handleChange} /><br />
+      <Input type="number" value={age} onChange={e => setAge(Number(e.target.value))} /><br />
+      <Button type="submit">Send</Button>
     </form>
   );
 }
