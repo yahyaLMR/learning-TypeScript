@@ -1,19 +1,17 @@
 
 import './App.css'
 import Card from './components/card';
-import Form from './components/form';
+import Layout from './components/Layout';
+import StatusMessage from './components/StatusMessage';
 
 function App() {
 
   return (
-    <>
-    <Form/>
-      <Card name="John Doe" age={30} email="john.doe@example.com" />
-      <Card name="Jane Smith" age={25} email="jane.smith@example.com" />
-      <Card name="Alice Johnson" age={28} email="alice.johnson@example.com" />
-      <Card name="Bob Brown" age={35} email="bob.brown@example.com" ><h3>This is a child element</h3></Card>
-      <Card name="Jane Smith" age={25} email="jane.smith@example.com" ><h3>This is a child element</h3></Card>
-    </>
+    <Layout>
+      <h2>Welcome to the Dashboard</h2>
+      <StatusMessage status="success" />
+      <Card name="User Profile" age={25} email="user@example.com" />
+    </Layout>
   )
 }
 
